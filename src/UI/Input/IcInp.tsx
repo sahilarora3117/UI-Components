@@ -14,7 +14,7 @@ const IcInp = ({inpType, inpPlaceholder}: InpProps) => {
                 <FontAwesomeIcon className="text-gray-400" icon={faSearch} />
 
                 </span>
-                <input type={inpType} placeholder={inpPlaceholder} className="w-full py-3 pl-10 pr-4 text-gray-700 bg-white border border-gray-300 rounded-md focus:shadow-md focus:outline-none" />
+                <input type={inpType} placeholder={inpPlaceholder} className="w-full py-3 pl-10 pr-4 text-gray-700 bg-white border border-gray-300 focus:shadow-md focus:outline-none" />
         </div>
 
     )

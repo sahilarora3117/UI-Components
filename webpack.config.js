@@ -45,12 +45,14 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
+    publicPath: '/'
   },
 
   // Use the html plugin.
   plugins: [htmlPlugin],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
+    historyApiFallback: true,
     compress: true,
     port: 3000
   }
