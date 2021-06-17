@@ -1,7 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faTimes, faExclamation } from '@fortawesome/free-solid-svg-icons';
-import { icon } from '@fortawesome/fontawesome-svg-core';
 
 type AlertProps = {
     alertText: string,
@@ -13,19 +12,19 @@ const Alert = ({ alertText, alertType }: AlertProps) => {
     let Icon: any;
     switch (alertType) {
         case "primary":
-            AlertClass += " bg-blue-500";
+            AlertClass += " bg-blue";
             Icon = faCheckCircle;
             break;
         case "danger":
-            AlertClass += " bg-red-500";
+            AlertClass += " bg-red";
             Icon = faExclamation;
             break;
         case "warning":
-            AlertClass += " bg-yellow-500";
+            AlertClass += " bg-yellow";
             Icon = faExclamation;
             break;
         case "success":
-            AlertClass += " bg-green-500";
+            AlertClass += " bg-green";
             Icon = faCheckCircle;
 
     }
@@ -40,7 +39,7 @@ const Alert = ({ alertText, alertType }: AlertProps) => {
                         <p className="mx-3">{alertText}</p>
                     </div>
 
-                    <button className="p-1 px-2 transition-colors duration-200 transform hover:bg-opacity-25 hover:bg-gray-600 focus:outline-none">
+                    <button className="p-1 px-2 transition-colors duration-200 transform hover:bg-opacity-25 hover:bg-gray focus:outline-none">
                         <FontAwesomeIcon className="text-white self-center" icon={faTimes} />
 
                     </button>

@@ -9,7 +9,7 @@ type BtnProps = {
 }
 
 const IcBtn = ({btnSize, btnText, btnType}: BtnProps) => {
-    let btnclass:string = "items-center px-4 py-2 tracking-wide filter drop-shadow-lg text-white capitalize transition-colors duration-200 transform focus:outline-none ";
+    let btnclass:string = "items-center px-4 py-2 rounded-sm tracking-wide filter drop-shadow-lg text-white capitalize transition-colors duration-200 transform focus:outline-none ";
     // font - font-medium and stuff
     switch(btnSize){
         case "xs":
@@ -21,24 +21,21 @@ const IcBtn = ({btnSize, btnText, btnType}: BtnProps) => {
         case "base":
             btnclass += " text-base";
             break;
-        case "xl":
-            btnclass += " text-xl";
-            break;  
     }
 
     // color
     switch(btnType){
         case "primary":
-            btnclass += " bg-blue-600 hover:bg-blue-700 focus:bg-blue-800";
+            btnclass += " bg-blue hover:bg-blue-dark ";
             break;
         case "danger":
-            btnclass += " bg-red-600 hover:bg-red-700 focus:bg-red-800" ;
+            btnclass += " bg-red hover:bg-red-dark " ;
             break;
         case "warning":
-            btnclass += " bg-yellow-500 hover:bg-yellow-600 focus:bg-yellow-800";
+            btnclass += " bg-yellow hover:bg-yellow-dark ";
             break;
         case "success":
-            btnclass += " bg-green-600 hover:bg-green-700 focus:bg-green-800";
+            btnclass += " bg-green hover:bg-green-dark ";
             break;
     }
 
